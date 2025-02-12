@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body {
+            height: 100%;
+        }
+
+        main {
+            width: 100%;
+            height: 100%;
+            background-image: url("img/stadium.png");
+            background-repeat: no-repeat;
+            background-size: 100vw 100%;
+        }
+
+        #placar-container {
+            position: absolute;
+            top: 1vw;
+            right: 5vw;
+        }
+
+        #placar-container #placar-img{
+            width: 30vw;
+        }
+
+        #placar {
+            position: relative;
+            font-family: 'Goldman', cursive;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #placar-content {
+            width: 90%;
+            height: 2vw;
+            position: absolute;
+            top: 52%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5vw;
+        }
+
+        #placar-marker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .score {
+            width: 3vw;
+            height: 4vw;
+            background-color: #104B6E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: #fff;
+        }
+
+        .score:nth-child(2) {
+            font-size: 2em;
+        }
+
+        .placar-team-group img{
+            width: 6vw;
+            margin-right: 0.3vw;
+        }
+        
+        .placar-team-group {
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .placar-team-group p {
+            word-break: keep-all;
+            width: 6vw;
+        }
+
+        #team-2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #team-2 img {
+            margin-left: 0.3vw;
+        }
+
+        #players-name {
+            width: 30vw;
+            height: 5vw;
+            background-color: #fff;
+            font-family: 'Goldman', cursive;
+            font-size: 3em;
+            border-radius: 0.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 5vw;
+            bottom: 2vw;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="placar-container">
+            <div id="placar">
+                <img src="img/placar.png" id="placar-img">
+
+                <div id="placar-content">
+                    <!-- Time 1 -->
+                    <div class="placar-team-group">
+                        <img src="img/sao-paulo.png" alt="">
+                        <p>São Paulo</p>
+                    </div>
+
+                    <!-- Marcadores -->
+                    <div id="placar-marker">
+                        <div class="score">1</div>
+                        <div class="score"><p>X</p></div>
+                        <div class="score">2</div>
+                    </div>
+
+                    <!-- Time 2 -->
+                    <div class="placar-team-group" id="team-2">
+                        <p>Palmeiras</p>
+                        <img src="img/palmeiras.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Nome dos jogadores -->
+        <div id="players-name">
+            <p>Rony</p>
+        </div>
+    </main>
+</body>
+</html>

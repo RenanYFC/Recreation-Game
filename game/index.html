@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,body {
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: retro-game;
+            src: url("Retro\ Gaming.ttf");
+        }
+
+        #content-1 {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 2.5vw;
+            background-image: url("img/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #start-logo {
+            width: 25%;
+        }
+
+        #btn-startMenu-container {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            gap: 1vw;
+            flex-direction: column;
+        }
+
+        .btn-startMenu {
+            padding: 1em 15%;
+            background-color: #fff;
+            outline: 0;
+            border: 2px solid #fff;
+            border-radius: 0.4em;
+            cursor: pointer;
+            transition: 0.35s linear;
+            font-family: retro-game;
+        }
+
+        .btn-startMenu:hover {
+            border: 2px solid yellow;
+            background-color: yellow;
+            box-shadow: 2px 2px 2px 2px rgba(255, 255, 0, 0.158);
+        }
+
+        .btn-startMenu:active {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Tela de início -->
+    <section id="content-1" class="content">
+        <!-- Logo -->
+        <img src="img/logo-light.png" alt="" id="start-logo">
+
+        <!-- Botões -->
+        <div id="btn-startMenu-container">
+            <!-- Botão de começar -->
+        <button class="btn-startMenu">
+            Nova Partida
+        </button>
+        <!-- Botão de acesso à dashboard -->
+        <button class="btn-startMenu">
+            Minha Conta
+        </button>
+        </div>
+    </section>
+</body>
+</html>
