@@ -1,0 +1,1086 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,body {
+    height: 100%;
+}
+
+p {
+    font-size: 0.8em;  
+}
+
+
+
+.password-error-container {
+    display: none;
+}
+
+error {
+    color: #ff4e4e;
+    font-size: 0.8em;
+    gap: 0.5vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 2;
+    display: none;
+}
+
+#error-container-overlay {
+    opacity: 0;
+}
+
+.password-error-container {
+    display: none;
+}
+
+#senhas-invalidas-row {
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    margin-top: -3%;
+}
+
+#senhas-invalidas-row-1 {
+    opacity: 0;
+}
+
+#senhas-invalidas-row-2 {
+    opacity: 0;
+}
+
+#senhas-invalidas-row .error-container-row:first-child {
+    width: 50%;
+}
+
+#senhas-invalidas-row .error-container-row:last-child {
+    width: 50%;
+}
+
+error :nth-of-type(2) {
+    top: 0;
+}
+
+error img {
+    width: 15px;
+}
+
+
+
+texto2 {
+    display: inline-block;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 3.2vw;
+}
+
+texto1 {
+    display: inline-block;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 3.2em;
+}
+
+.btn {
+    border: 0;
+    outline: 0;
+    padding: 2.3% 5%;
+    background-color: #1F1F1F;
+    font-size: 1em;
+    color: #ffffff;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+
+#topo {
+    height: 10%;
+    background-color: #1F1F1F;
+}
+
+
+#content-container {
+    width: 100%;
+    height: 90%;
+}
+
+#content-1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.aside-dinamic-form {
+    width: 65%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    z-index: 1;
+}
+
+/* Parte 1: Card*/
+.content-div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F3E5E4;
+    width: 35%;
+}
+
+#texto {
+    width: 60%;
+    margin-bottom: 10%;
+}
+
+#card-container {
+    width: 75%;
+    padding: 7% 0;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.icon-user {
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+}
+
+.icon-campo-focusout {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#card-info-container {
+    text-align: center;
+    gap: 56px;
+}
+
+.card-info-digitada {
+    height: 3vh;
+    word-break: break-all;
+}
+
+.nome{
+    display: inline-block;
+}
+
+#text-container1 {
+    text-align: center;
+}
+
+#text-container1 p {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/*==========================================================================================================*/
+
+/* Parte 2: cadastrar dados pessoais */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    gap: 4vh;
+}
+
+#content-container #content-1 .content-div:nth-child(2) .container p {
+    width: 80%;
+}
+
+.form {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:  4.5vh;
+    
+}
+
+.form p, .form a {
+    width: 100%;
+}
+
+
+#inline {
+    display: inline !important;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    position: relative;
+    gap: 6vh;
+    width: 100%;
+}
+
+.form-group input {
+    width: 100%;
+    
+    height: 5vh;
+    border: 0;
+    border-bottom: 1px solid #1F1F1F;
+    font-size: 1.6em !important;
+    background-color: #bebebe;
+}
+
+.form-group label {
+    cursor: text;
+    width: 100%;
+    color: #1F1F1F;
+    background-color: #ffffff;
+    /*
+    position: absolute;
+    top: -25%;
+    left: 5%;
+    */
+    transition: 270ms linear;
+    position: absolute;
+    top: 0;
+    font-size: 2vh;
+}
+
+.form-group input:focus {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+}
+
+.form-group input:focus ~ label {
+    position: absolute;
+    top: -50% !important;
+    color: #000000;
+    font-size: 2vh;
+}
+
+.form-group input:valid ~ label {
+    top: -45%;
+    color: #000000;
+    font-size: 2vh;
+}
+
+#error-container1 {
+    display: none;
+}
+
+.aside-dinamic-form #possuiConta {
+    display: none;
+}
+
+/* Cadastro: parte das credenciais */
+#content-2{
+    overflow-x: hidden;
+    width: 65%;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    z-index: 0;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    padding: 3%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: visible;
+}
+
+.container texto1 {
+    margin: 4vh 0;
+    width: 100%;
+    text-align: center;
+}
+
+.form-group {
+    gap: 8%;
+    justify-content: start;
+    align-items: start;
+}
+
+#form-group-password {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 2%;
+}
+
+
+/* Form Credenciais */
+
+#texto2 {
+    width: 70%;
+}
+
+.back-button-container {
+    margin: 2vw 2vw 0vw 2vw;
+    width: 50%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+
+.back-button {
+    cursor: pointer;
+    width: 4%;
+    min-width: 40px;
+}
+
+.esconder {
+   display: none !important;
+   background-color: aqua !important;
+}
+
+#error-container2 {
+    opacity: 0;
+    margin: 1vh 0;
+}
+
+#send2 {
+    width: 50vw;
+    margin-top: -1vw;
+    margin-bottom: 5vh;
+}
+
+#requirements-align {
+    width: 100%;
+}
+
+#requirements-container {
+    transition: 2s linear;
+}
+
+#confirmarSenhaContainer {
+    margin-top: -5%;
+}
+
+.confirmarSenhaContainerBaixo {
+    margin-top: 0;
+}
+
+#requirements-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 2em;
+}
+
+.requirements {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    width: 100%;
+    font-size: 1em;
+}
+
+.check-passsword-icon {
+    width: 2.5em;
+    min-width: 14px;
+}
+
+.input-send2 {
+    font-size: 0.9em !important;
+}
+
+/* Página de Verificação de Email */
+
+#content-container #content-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    gap: 5vw;
+}
+
+.text-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vh;
+    width: 100%;
+}
+
+.text-container p {
+    width: 50%;
+}
+
+#send3 {
+    margin-top: 5vw;
+}
+
+#send3, #send4 {
+    padding: 2vw 5vw;
+    margin-bottom: 2vw;
+}
+
+#container-figure {
+    width: 13.02vw;
+    height: 13.02vw !important;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#figure-border {
+    width: 10.8981vw;
+    height: 10.8981vw;
+    border-radius: 50%;
+    border: 0.349516vw solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: rotate(-10deg);
+    animation: preserveFigure linear 6s infinite;
+}
+
+#figure-content-space {
+    width: 6.9756vw;
+    height: 5.6658vw;
+    border-radius: 1.091775vw;
+    background-color: #fff;
+    position: relative;
+}
+
+#figure-design-bar {
+    width: 100%;
+}
+
+#figure-design-bar-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2.4vw;
+    position: absolute;
+    top: 5%;
+}
+
+.figure-design-retangle {
+    width: 0.349516vw;
+    height: 3.2572vw;
+    background-color: #1F1F1F;
+    position: relative;
+}
+
+.figure-design-bar:first-child {
+    transform: rotate(-60deg);
+}
+
+.figure-design-bar:last-child {
+    transform: rotate(60deg);
+}
+
+.figure-design-circle {
+    width: 0.349516vw;
+    height: 0.349516vw;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+
+#handle-container {
+    width: 4.3421vw;
+    height: 1.3021vw;
+    background-color: chartreuse;
+    position: absolute;
+    right: 0;
+    bottom: 2.6042vw;
+    transform: rotate(-151deg) translateX(-120%);
+}
+
+.figure-design-retangle {
+    background-color: #1f1f1f;
+    width: 6.5363vw;
+    height: 1.3021vw;
+}
+
+#container-figure {
+    transform: rotate(10deg);
+    animation: rotateHandle linear 6s infinite;
+}
+
+.figure-design-circle {
+    background-color: #1f1f1f;
+    width: 1.3021vw;
+    height: 1.3021vw;
+    left: 0;
+    transform: translateX(-50%);
+}
+
+
+#content-3 {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    top: 10vh;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+#email-enviar-alterar-container {
+    text-align: center;
+}
+
+#titulo-tela-4 {
+    width: 100%;
+    text-align: center;
+}
+
+#titulo-tela-4 texto1 {
+    width: 80%;
+}
+
+
+
+#verification-code-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+.verification-code-input {
+    margin-top: 5%;
+    width: 10%;
+    height: 16vh;
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid #000;
+    background-color: rgb(252, 252, 252);
+    text-align: center;
+    font-size: 2em;
+}
+
+#alter-email {
+    width: 100%;
+    text-align: left;
+}
+
+#alter-email p {
+    padding-left: 7vw;
+}
+
+.replace-to-email {
+    color: blue;
+}
+
+/* Tela de Teste */
+
+#content-4 {
+    background-color: #fff;
+    position: absolute;
+    z-index: 3;
+    height: 90%;
+    top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#reenviarCodigo {
+    display: none;
+}
+
+#content-5 {
+    background-color: #fff;
+    height: 90%;
+    top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 8vw;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+}
+
+#content-5 texto1 {
+    width: 100%;
+    font-size: 4em;
+}
+
+.emoji-smile-container {
+    width: 100%;
+    height: 29vw;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.emoji-smile-border {
+    width: 100%;
+    height: 100%;
+    border: 1.5vw solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.emoji-smile-content-face {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emoji-smile-eyes-container {
+    width: 62.4%;
+    height: 7.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emoji-smile-eye {
+    width: 3.9vw;
+    height: 3.9vw;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.emoji-smile-mouth {
+    width: 62.4%;
+    height: 11.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.emoji-smile-mouth-row {
+    width: 17vw;
+    height: 1.17vw;
+    background-color: #000;
+}
+
+.emoji-smile-mouth-circle-container {
+    width: 17vw;
+    height: 7.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-y: hidden;
+}
+
+.emoji-smile-mouth-circle {
+    width: 100%;
+    height: 15.6vw;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: -105%;
+}
+
+.column-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-align div{
+    width: 32vw;
+    text-align: center;
+}
+
+#send5 {
+    margin: 20vh 0 2vh 0;
+    padding: 2vw 5vw;
+}
+
+#send5-container {
+    width: 100%;
+}
+
+#tela-5-emoji-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+
+@keyframes rotateHandle {
+    0% {
+       transform: rotate(10deg);
+    }
+    
+    50% {
+        transform: rotate(110deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes preserveFigure {
+    0% {
+        transform: rotate(-10deg);
+     }
+     
+     50% {
+         transform: rotate(-110deg);
+     }
+ 
+     100% {
+         transform: rotate(-10deg);
+     }
+}
+
+/* ================ Media Queries ================ */
+
+/* Layout Mobile */
+
+@media screen and (max-width: 768px){
+
+    .content-div:first-child {
+        display: none;
+    }
+
+    .aside-dinamic-form, .content-div:last-child {
+        background-color: red;
+        width: 100%;
+    }
+
+
+
+    /* Parte 2: Formulário Dados Pessoais */
+
+    /*
+    #content-container #content-1 .content-div:nth-child(2) .container p {
+        font-size: 2vh;
+    }
+
+    #content-container #content-1 .content-div:nth-child(2) .container #termos {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+    
+    #content-container #content-1 .content-div, #content-2 {
+        width: 100%;
+    }
+
+    #content-2 .form{
+        width: 95%;
+    }
+
+    #content-2 #form-dadosPessoais #form-group-password {
+        flex-direction: column;
+        gap: 9vw;
+    }
+
+    .aside-dinamic-form .form-group input:focus ~ label {
+        position: absolute;
+        top: -30%;
+        color: #000000;
+        font-size: 2vh;
+    }
+    
+    .aside-dinamic-form .form-group input:valid ~ label {
+        top: -30%;
+        color: #000000;
+        font-size: 2vh;
+    }
+
+    #error-container1 {
+        margin-bottom: 3%;
+    }
+
+
+    .content-div:nth-child(2) .form-group input {
+        
+    }
+
+    .form {
+        position: relative;
+        width: 90%;
+        margin: 3% 0;
+    }
+
+    .password-error-container {
+        display: block;
+        opacity: 0;
+    }
+    
+    password-error-container {
+        display: block;
+    }
+
+    #senhas-invalidas-row .error-container-row:first-child {
+        display: none;
+    }
+    
+    #senhas-invalidas-row .error-container-row:last-child {
+        display: none;
+    }
+
+    .content-div:nth-child(2) #possuiConta {
+        display: block;
+        padding-bottom: 5vh;
+    }
+
+    .content-div :nth-child(2) span, #card-container {
+        display: none;
+    }
+
+    #send3 {
+        margin-top: 12vh;
+    }
+
+    #content-4 texto1 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px){ 
+    texto1 {
+        font-size: 2em;
+    }
+    
+
+    .btn {
+        padding: 2.5vw 8vw !important;
+    }
+
+    .back-button-container {
+        position: relative;
+        width: 95%;
+        margin-top: -3vh;
+        margin-left: -8vw;
+    }
+
+    #content-3 .back-button-container {
+        margin-top: -13vh !important;
+
+    }
+    
+
+    .back-button {
+        min-width: 0;
+        width: 10%;
+    }
+
+    #content-2 #form-dadosPessoais {
+        gap: 4vh;
+    }
+    
+    #content-2 #form-dadosPessoais #confirmarSenhaContainer {
+        margin-top: -1vh;
+    }
+
+}
+
+@media all and (max-width: 700px) {
+
+    #texto2 texto1 {
+        width: 100%;
+        font-size: 1.7em;
+    }
+
+    #error-img-1 {
+        margin-left: 1vw;
+        margin-right: 10px;
+    }
+
+    .check-passsword-icon {
+        margin-right: 10px;
+    }
+
+    #text-container3 p {
+        width: 75%;
+    }
+
+    .back-button-container {
+        margin-left: -4vw;
+    }
+
+    #content-3 .back-button-container {
+        margin-top: -3vh;
+
+    }
+
+    #container-figure {
+        width: 32vw;
+        height: 32vw !important;
+        background-color: #1F1F1F;
+    }
+    
+    #figure-border {
+        width: 26.8vw;
+        height: 26.8vw;
+        border: 0.858vw solid #fff;
+    }
+    
+    #figure-content-space {
+        width: 17.15vw;
+        height: 13.95vw;
+        border-radius: 2.68vw;
+    }
+    
+    #figure-design-bar {
+        width: 100%;
+    }
+    
+    #figure-design-bar-container {
+        gap: 6.11vw;
+    }
+    
+    .figure-design-retangle {
+        width: 0.858vw;
+        height: 8.576vw;
+    }
+
+    
+    .figure-design-circle {
+        width: 0.858vw;
+        height: 0.858vw;
+    }
+    
+    #handle-container {
+        width: 10.672vw;
+        height: 3.2vw;
+        bottom: 8vw;
+    }
+    
+    #handle-container .figure-design-retangle {
+        width: 16.08vw;
+        height: 3.2vw;
+    }
+    
+    #handle-container .figure-design-circle {
+        width: 3.2vw;
+        height: 3.2vw;
+    }
+
+    #content-5 {
+        background-color: #fff;
+        height: 90%;
+        top: 10vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .column-align {
+        height: 100%;
+        gap: 30vh;
+    }
+
+    #titulo-tela-5 {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #titulo-tela-5 texto1 {
+        width: 100%;
+        
+    }
+   
+    #tela-5-emoji-container {
+        position: absolute;
+        top: 64%;
+        transform: translateY(-50%);
+    }
+
+    .emoji-smile-mouth-row {
+        margin-bottom: -0.2vh;
+    }
+    
+
+}
+
+@media all and (max-width: 400px) {
+
+
+
+    #tela-5-emoji-container {
+        transform: scale(2);
+        top: 52%;
+    }
+
+    #titulo-tela-5 texto1 {
+        font-size: 2.5em;
+    }
+   
+}
+*/
+}
