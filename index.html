@@ -7,10 +7,6 @@
     <title>Cadastro</title>
     <link rel="shortcut icon" href="img/recreation-icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style/style.css">
-    
-    <!-- Bibliotecas JS -->
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
 
 </head>
 <body>
@@ -32,7 +28,6 @@
                         <img src="img/icon-user.png" alt="" class="icon-user icon-campo-vazio">
                     </div>
                      <!-- Container - Informações Digitadas -->
-                    <div class="card">
                         <div id="card-info-container">
                             <div id="container-nome">
                                 <p class="card-info-digitada nome"></p>
@@ -41,7 +36,6 @@
                             <p class="card-info-digitada"></p>
                             <p class="card-info-digitada"</p>
                         </div>
-                    </div>
                 </div>
             </div>
 
@@ -105,9 +99,8 @@
         </div>
 
         <!-- Criar conta: credenciais -->
-        <div id="content-2" class="content aside-dinamic-form esconder">
+        <div id="content-2" class="content esconder">
             <div class="content-div">
-                <div class="container">
                 <div class="back-button-container">
                     <img src="img/back-button.png" alt="" class="back-button">
                 </div>
@@ -116,17 +109,17 @@
                     <texto1>Agora informe suas credenciais</texto1>
                 </div>
                 <!-- Formulário -->
-                <form action="" method="" id="form-dadosPessoais" class="form">
+                <form action="" method="" id="form-credentials" class="form">
 
                     <!-- Email -->
                     <div class="form-group">
                         <input type="text" name="email" id="email" class="input-send2" required>
                         <label for="email">Email</label>
+                        
                         <!-- Overlay de alinhamento -->
-                        <div id="error-container-overlay">
+                        <div id="error-container-overlay" class="esconder">
                             <error>
                                 <img src="img/info-alert.svg" alt="">
-                                  
                             </error>
                         </div>
                     </div>
@@ -137,6 +130,7 @@
                             <input type="text" name="senha" id="senha" class="input-send2" required>
                             <label for="senha">Senha</label>
 
+                        </div>
                         <!-- Aviso de erro na senha -->
                         <div class="password-error-container" id="senhas-invalidas-column-1">
                             <error>
@@ -145,19 +139,17 @@
                             </error>
                         </div>
 
-                        </div>
-
                         <!-- Confirmar Senha -->
                         <div class="form-group" id="confirmarSenhaContainer">
                             <input type="text" name="confirmarSenha" id="confirmarSenha" class="input-send2" required>
                             <label for="confirmarSenha">Confirme sua senha</label>
-                             <!-- Aviso de senhas diferentes  -->
-                            <div class="password-error-container" id="senhas-invalidas-column-2">
-                                <error>
-                                    <img src="img/info-alert.svg" alt="">
-                                    As senhas não coincidem
-                                </error>
-                            </div>
+                        </div>
+                         <!-- Aviso de senhas diferentes  -->
+                         <div class="password-error-container" id="senhas-invalidas-column-2">
+                            <error>
+                                <img src="img/info-alert.svg" alt="">
+                                As senhas não coincidem
+                            </error>
                         </div>
                         
                     </div>
@@ -224,7 +216,6 @@
                     <button class="btn" id="send2">Continuar</button>
                 </div>
             </div>
-            </div>
         </div>
         </div>
         <!-- Criar conta: verificar email -->
@@ -242,34 +233,28 @@
             </div>
     
             <!-- Figura Lupa -->
-            <section id="container-figure">
-                <div id="figure-border">
-                    <div id="figure-content-space">
-                        <div id="figure-design-bar-container">
-                            <div class="figure-design-bar">
-                                <div class="figure-design-retangle">
-                                    <div class="figure-design-circle"></div>
-                                </div>
+             
+            <section id="container-loupe">
+                <div id="border-loupe">
+                    <div id="internal-circle-loupe">
+                        <div id="email-box-loupe">
+                            <div class="email-bar-loupe">
+                                <div class="email-bar-circle-loupe"></div>
                             </div>
-                            <div class="figure-design-bar">
-                                <div class="figure-design-retangle">
-                                    <div class="figure-design-circle"></div>
-                                </div>
+                            <div class="email-bar-loupe">
+                                <div class="email-bar-circle-loupe"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="handle-container">
-                    <div class="figure-design-retangle">
-                        <div class="figure-design-circle"></div>
-                    </div>
+                <div id="hadle-loupe">
+                    <div id="handle-circle-loupe"></div>
                 </div>
-    
             </section>
              <!-- Container do Botão -->
              <div id="send3-container">
                 <!-- Enviar -->
-                <button class="btn" id="send3">Continuar</button>
+                <button class="btn" id="send3">Enviar</button>
             </div>
         </div>
         <!-- Criar conta: concluído -->
