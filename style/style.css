@@ -14,12 +14,6 @@ p {
     font-size: 0.8em;  
 }
 
-
-
-.password-error-container {
-    display: none;
-}
-
 error {
     color: #ff4e4e;
     font-size: 0.8em;
@@ -28,11 +22,10 @@ error {
     justify-content: left;
     align-items: center;
     z-index: 2;
-    display: none;
 }
 
 #error-container-overlay {
-    opacity: 0;
+    opacity: 1;
 }
 
 .password-error-container {
@@ -43,7 +36,6 @@ error {
     width: 100%;
     display: flex;
     gap: 2%;
-    margin-top: -3%;
 }
 
 #senhas-invalidas-row-1 {
@@ -54,13 +46,10 @@ error {
     opacity: 0;
 }
 
-#senhas-invalidas-row .error-container-row:first-child {
+#senhas-invalidas-row .error-container-row{
     width: 50%;
 }
 
-#senhas-invalidas-row .error-container-row:last-child {
-    width: 50%;
-}
 
 error :nth-of-type(2) {
     top: 0;
@@ -84,23 +73,24 @@ texto1 {
     display: inline-block;
     color: #000000;
     font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 3.2em;
+    font-weight: bolder;
+    font-size: 3em;
 }
 
 .btn {
     border: 0;
     outline: 0;
-    padding: 2.3% 5%;
+    padding: 0.6em 1em;
     background-color: #1F1F1F;
-    font-size: 1em;
+    font-size: 1.45em;
     color: #ffffff;
-    border-radius: 2vw;
+    border-radius: 0.5em;
     cursor: pointer;
+    margin: 1em 0;
 }
 
 #topo {
-    height: 10%;
+    height: 10vh;
     background-color: #1F1F1F;
 }
 
@@ -117,17 +107,12 @@ texto1 {
 }
 
 .aside-dinamic-form {
-    width: 65%;
-    height: 90%;
-    background-color: rgb(255, 255, 255);
+    width: 50%;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: 0;
-    top: 10%;
-    z-index: 1;
 }
 
 /* Parte 1: Card*/
@@ -136,9 +121,9 @@ texto1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #F3E5E4;
-    width: 35%;
+    width: 100%;
 }
+
 
 #texto {
     width: 60%;
@@ -146,8 +131,8 @@ texto1 {
 }
 
 #card-container {
-    width: 75%;
-    padding: 7% 0;
+    width: 35vw;
+    height: 35vw;
     border-radius: 50px;
     background: #e0e0e0;
     box-shadow:  20px 20px 60px #bebebe,
@@ -174,12 +159,16 @@ texto1 {
 
 #card-info-container {
     text-align: center;
-    gap: 56px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .card-info-digitada {
     height: 3vh;
     word-break: break-all;
+    font-size: 1.45em;
 }
 
 .nome{
@@ -202,12 +191,9 @@ texto1 {
 
 .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    height: 90%;
-    gap: 4vh;
+
 }
 
 #content-container #content-1 .content-div:nth-child(2) .container p {
@@ -220,8 +206,10 @@ texto1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap:  4.5vh;
-    
+}
+
+.aside-dinamic-form .form {
+    gap: 2em;
 }
 
 .form p, .form a {
@@ -245,12 +233,10 @@ texto1 {
 
 .form-group input {
     width: 100%;
-    
-    height: 5vh;
     border: 0;
+    padding: 0.5em 0;
     border-bottom: 1px solid #1F1F1F;
-    font-size: 1.6em !important;
-    background-color: #bebebe;
+    font-size: 1.3em;
 }
 
 .form-group label {
@@ -265,8 +251,9 @@ texto1 {
     */
     transition: 270ms linear;
     position: absolute;
-    top: 0;
-    font-size: 2vh;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3em;
 }
 
 .form-group input:focus {
@@ -277,38 +264,29 @@ texto1 {
 
 .form-group input:focus ~ label {
     position: absolute;
-    top: -50% !important;
+    top: -0.5em;
     color: #000000;
-    font-size: 2vh;
+    font-size: 1em;
 }
 
 .form-group input:valid ~ label {
-    top: -45%;
+    top: -0.5em;
     color: #000000;
-    font-size: 2vh;
+    font-size: 1em;
 }
 
 #error-container1 {
     display: none;
 }
 
-.aside-dinamic-form #possuiConta {
+#possuiConta {
+    font-size: 1.2em;
     display: none;
+    padding-bottom: 1em;
 }
 
-/* Cadastro: parte das credenciais */
-#content-2{
-    overflow-x: hidden;
-    width: 65%;
-    position: absolute;
-    right: 0;
-    top: 10%;
-    z-index: 0;
-    width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#termos {
+    font-size: 1.2em;
 }
 
 .content-div {
@@ -316,9 +294,30 @@ texto1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100%;
     width: 100%;
 }
+
+/* Cadastro: parte das credenciais */
+#content-2{
+    overflow-x: hidden;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    z-index: 0;
+    height: 90%;
+}
+
+#content-2 texto1 {
+    margin-top: 1em;
+}
+
+#content-2 .content-div {
+    display: flex;
+    gap: 2em;
+}
+
+
 
 .container {
     display: flex;
@@ -330,16 +329,8 @@ texto1 {
     overflow-y: visible;
 }
 
-.container texto1 {
-    margin: 4vh 0;
-    width: 100%;
-    text-align: center;
-}
-
-.form-group {
-    gap: 8%;
-    justify-content: start;
-    align-items: start;
+#form-credentials {
+    
 }
 
 #form-group-password {
@@ -349,6 +340,8 @@ texto1 {
     flex-direction: row;
     align-items: baseline;
     gap: 2%;
+    margin-top: 2em;
+    
 }
 
 
@@ -356,6 +349,9 @@ texto1 {
 
 #texto2 {
     width: 70%;
+    text-align: center;
+    margin-bottom: 2em;
+    
 }
 
 .back-button-container {
@@ -409,37 +405,25 @@ texto1 {
     list-style: none;
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 1vh;
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 .requirements {
     display: flex;
     gap: 1vw;
     align-items: center;
-    width: 100%;
     font-size: 1em;
 }
 
 .check-passsword-icon {
-    width: 2.5em;
-    min-width: 14px;
+    width: 1.5em;
 }
 
-.input-send2 {
-    font-size: 0.9em !important;
-}
 
 /* Página de Verificação de Email */
 
-#content-container #content-3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    gap: 5vw;
-}
 
 .text-container {
     text-align: center;
@@ -449,133 +433,142 @@ texto1 {
     align-items: center;
     gap: 2.5vh;
     width: 100%;
+    margin: 1em 0;
 }
 
 .text-container p {
     width: 50%;
+    font-size: 1.2em;
+    margin-bottom: 3vh;
 }
-
-#send3 {
-    margin-top: 5vw;
-}
-
-#send3, #send4 {
-    padding: 2vw 5vw;
-    margin-bottom: 2vw;
-}
-
-#container-figure {
-    width: 13.02vw;
-    height: 13.02vw !important;
-    background-color: #1f1f1f;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-#figure-border {
-    width: 10.8981vw;
-    height: 10.8981vw;
-    border-radius: 50%;
-    border: 0.349516vw solid #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transform: rotate(-10deg);
-    animation: preserveFigure linear 6s infinite;
-}
-
-#figure-content-space {
-    width: 6.9756vw;
-    height: 5.6658vw;
-    border-radius: 1.091775vw;
-    background-color: #fff;
-    position: relative;
-}
-
-#figure-design-bar {
-    width: 100%;
-}
-
-#figure-design-bar-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 2.4vw;
-    position: absolute;
-    top: 5%;
-}
-
-.figure-design-retangle {
-    width: 0.349516vw;
-    height: 3.2572vw;
-    background-color: #1F1F1F;
-    position: relative;
-}
-
-.figure-design-bar:first-child {
-    transform: rotate(-60deg);
-}
-
-.figure-design-bar:last-child {
-    transform: rotate(60deg);
-}
-
-.figure-design-circle {
-    width: 0.349516vw;
-    height: 0.349516vw;
-    border-radius: 50%;
-    background-color: #1f1f1f;
-    position: absolute;
-    top: 0;
-    transform: translateY(-50%);
-}
-
-#handle-container {
-    width: 4.3421vw;
-    height: 1.3021vw;
-    background-color: chartreuse;
-    position: absolute;
-    right: 0;
-    bottom: 2.6042vw;
-    transform: rotate(-151deg) translateX(-120%);
-}
-
-.figure-design-retangle {
-    background-color: #1f1f1f;
-    width: 6.5363vw;
-    height: 1.3021vw;
-}
-
-#container-figure {
-    transform: rotate(10deg);
-    animation: rotateHandle linear 6s infinite;
-}
-
-.figure-design-circle {
-    background-color: #1f1f1f;
-    width: 1.3021vw;
-    height: 1.3021vw;
-    left: 0;
-    transform: translateX(-50%);
-}
-
 
 #content-3 {
     position: absolute;
     z-index: 2;
-    height: 100%;
     top: 10vh;
     width: 100%;
+    height: 90%;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    padding-top: 2vh;
+    justify-content: center;
+    gap: 5vh;
+}
+
+#send3, #send4 {
+    padding: 0.6em 1.5em;
+    background-color: #1F1F1F;
+    font-size: 1.45em;
+}
+
+#container-figure {
+    width: 500px;
+    height: 500px;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#container-loupe {
+    width: 30vh;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    position: relative;
+}
+
+#border-loupe {
+    width: 80%;
+    height: 80%;
+    background-color: #1F1F1F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+}
+
+#internal-circle-loupe {
+    width: 75%;
+    height: 75%;
+    border: 0.8em solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email-box-loupe {
+    width: 60%;
+    height: 50%;
+    background-color: #FFFFFF;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.email-bar-loupe {
+    width: 50%;
+    height: 10%;
+    background-color: #1F1F1F;
+    margin-top: 3vh;
+}
+
+.email-bar-loupe:nth-child(1)  {
+    transform: rotate(215deg);
+    display: flex;
+    justify-content: end;
+    margin-right: -7.25%;
+    
+}
+.email-bar-loupe:nth-child(2) {
+    background-color: #1F1F1F;
+    transform: rotate(-215deg);
+    margin-left: -7.25%;
+
+}
+
+.email-bar-circle-loupe {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #1F1F1F;
+}
+
+.email-bar-loupe:nth-child(1) .email-bar-circle-loupe {
+    transform: translateX(50%);
+}
+
+.email-bar-loupe:nth-child(2) .email-bar-circle-loupe {
+    transform: translateX(-50%);
+}
+
+#hadle-loupe {
+    width: 35%;
+    height: 10%;
+    background-color: #1F1F1F;
+    position: absolute;
+    z-index: 0;
+    bottom: 5vh;
+    right: 0;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: end;
+    animation: rotateHandle linear 6s infinite;
+}
+
+#handle-circle-loupe {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: #1F1F1F;
+    transform: translateX(50%);
 }
 
 #email-enviar-alterar-container {
@@ -776,15 +769,36 @@ texto1 {
 
 @keyframes rotateHandle {
     0% {
-       transform: rotate(10deg);
+        right: 0;
+        transform: rotate(45deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
     }
     
     50% {
-        transform: rotate(110deg);
+        /*
+        right: 65%;
+        transform: rotate(-225deg);
+        */
+        right: 65%;
+        transform: rotate(135deg);
+
+    }
+
+    75% {
+        transform: rotate(90deg);
     }
 
     100% {
-        transform: rotate(10deg);
+        /*
+        right: 0;
+        transform: rotate(45deg);
+        */
+        right: 0;
+        transform: rotate(45deg);
+
     }
 }
 
@@ -808,14 +822,69 @@ texto1 {
 
 @media screen and (max-width: 768px){
 
-    .content-div:first-child {
+    .content-div:first-child { 
         display: none;
     }
 
     .aside-dinamic-form, .content-div:last-child {
-        background-color: red;
         width: 100%;
     }
+
+    .text-container p {
+        text-align: left;
+    }
+
+    .form {
+        margin: em 0;
+    }
+
+    #termos {
+        margin-bottom: 0.5em
+    }
+
+    #possuiConta {
+        display: block;
+    }
+
+    .back-button-container {
+        top: 2.5vh;
+    }
+
+    #content-2 texto1 {
+        font-size: 2.3em;
+        margin-top: 2em;
+    }
+
+    .error-container-row {
+        display: none;
+    }
+
+    #form-group-password {
+        flex-direction: column;
+    }
+
+    #confirmarSenhaContainer {
+        margin-top: 4vh;
+    }
+
+    .password-error-container {
+        display: flex !important;
+    }
+
+    #senhas-invalidas-column-2 {
+        margin-bottom: 4vh;
+    }
+
+    .requirements {
+        font-size: 0.8em;
+    }
+
+    .check-passsword-icon {
+        width: 2em;
+        margin-right: 1em;
+    }
+
+}
 
 
 
@@ -1083,4 +1152,4 @@ texto1 {
    
 }
 */
-}
+
