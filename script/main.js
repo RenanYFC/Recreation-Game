@@ -21,7 +21,7 @@ let cardSobrenome = document.querySelectorAll('.card-info-digitada')[1]
 let cardCPF = document.querySelectorAll('.card-info-digitada')[2]
 let cardDataNascimento = document.querySelectorAll('.card-info-digitada')[3]
 let content1 = document.querySelectorAll(".aside-dinamic-form")[0]
-let content2 = document.querySelectorAll(".aside-dinamic-form")[1]
+let content2 = document.querySelector("#content-2")
 let content3 = document.querySelector("#content-3")
 let content4 = document.querySelector("#content-4")
 let content5 = document.querySelector("#content-5")
@@ -381,9 +381,10 @@ send1.addEventListener('click',()=>{
         content1.classList.add("esconder")
         content2.classList.remove("esconder")
         cardContainer.classList.add("esconder")
-        form1Invalido.style.display = "none"
+        //form1Invalido.style.display = "none"
     }
     else {
+        console.log("invalido")
         form1Invalido.style.display = "block"
     }
 })
@@ -396,7 +397,7 @@ backButton1.addEventListener('click',()=>{
 
 // Eventos para o 2º Formulário: Credenciais
 
-senha.addEventListener ('keyup',(evento)=>{
+senha.addEventListener ('input',(evento)=>{
     console.log (""+senha.value)
     checkChange(senha.value)
 })
