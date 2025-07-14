@@ -7,7 +7,8 @@
 **Cronologia:**
 - Este projeto foi criado entre o 1º e o 2º semestre de 2023, concluído com êxito e apresentado na Etec de Cotia, com vídeo disponível no YouTube:
 - https://youtu.be/5FSc8EqbSrc;
-- Após muito aprendizado, notou-se a possibilidade de refatoração no código, visando otimizar a usabilidade e a escalabilidade.
+- Após muito aprendizado, notou-se a possibilidade de refatoração no código, visando otimizar a usabilidade e a escalabilidade;
+- Atualmente o desenvolvimento se encontra pausado.
 
 **Detalhes da refatoração:**
 - Aprimorar a UI e a UX;
