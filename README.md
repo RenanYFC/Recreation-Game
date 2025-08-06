@@ -19,3 +19,10 @@
 **Modelo Entidare-Relacionamento do Banco de Dados:**
 
 ![image](https://github.com/user-attachments/assets/6c373c7a-e768-4a2e-9060-747e9cae8b73)
+
+## 👥 Criadores
+O projeto foi desenvolvido por
+
+👤 Carlos Henrique: https://www.linkedin.com/in/carlos-henrique-37b76a243/
+
+👤 Renan Yamamoto: https://www.linkedin.com/in/renanyfc/
